@@ -1,0 +1,75 @@
+[
+    {
+      "CardHolderName": "John Doe",
+      "CardType": "Visa",
+      "CardNumber": 4111111111111111,
+      "CreditLimit": 5000,
+      "BankName": "Chase",
+      "ValidUpto": "2025-12-31",
+      "BillingCycleStart": "2024-08-01",
+      "BillingCycleEnd": "2024-08-31",
+      "cvv": 123,
+      "cardColor": "#FF5733"
+    },
+    {
+      "CardHolderName": "Jane Smith",
+      "CardType": "MasterCard",
+      "CardNumber": 5555555555554444,
+      "CreditLimit": 7500,
+      "BankName": "Bank of America",
+      "ValidUpto": "2026-03-31",
+      "BillingCycleStart": "2024-07-15",
+      "BillingCycleEnd": "2024-08-14",
+      "cvv": 456,
+      "cardColor": "#33FF57"
+    },
+    {
+      "CardHolderName": "Michael Johnson",
+      "CardType": "American Express",
+      "CardNumber": 378282246310005,
+      "CreditLimit": 10000,
+      "BankName": "Wells Fargo",
+      "ValidUpto": "2027-11-30",
+      "BillingCycleStart": "2024-08-10",
+      "BillingCycleEnd": "2024-09-09",
+      "cvv": 789,
+      "cardColor": "#3357FF"
+    },
+    {
+      "CardHolderName": "Emily Davis",
+      "CardType": "Discover",
+      "CardNumber": 6011111111111117,
+      "CreditLimit": 8000,
+      "BankName": "CitiBank",
+      "ValidUpto": "2025-08-31",
+      "BillingCycleStart": "2024-08-05",
+      "BillingCycleEnd": "2024-09-04",
+      "cvv": 321,
+      "cardColor": "#FF33A1"
+    },
+    {
+      "CardHolderName": "William Brown",
+      "CardType": "Visa",
+      "CardNumber": 4111111111111112,
+      "CreditLimit": 6000,
+      "BankName": "HSBC",
+      "ValidUpto": "2026-05-31",
+      "BillingCycleStart": "2024-08-20",
+      "BillingCycleEnd": "2024-09-19",
+      "cvv": 654,
+      "cardColor": "#FF8C33"
+    },
+    {
+      "CardHolderName": "Olivia Wilson",
+      "CardType": "MasterCard",
+      "CardNumber": 5200828282828210,
+      "CreditLimit": 9000,
+      "BankName": "Capital One",
+      "ValidUpto": "2027-02-28",
+      "BillingCycleStart": "2024-08-15",
+      "BillingCycleEnd": "2024-09-14",
+      "cvv": 987,
+      "cardColor": "#33FFF3"
+    }
+  ]
+  
