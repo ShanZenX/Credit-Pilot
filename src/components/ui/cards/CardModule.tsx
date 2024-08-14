@@ -1,18 +1,38 @@
-export default function CardModule() {
+interface IPROPS {
+  bankName: string;
+  cardNumber: number;
+  cardHolderName: string;
+  cardType: string;
+  cardColor: string
+}
+
+export default function CardModule({
+  bankName,
+  cardNumber,
+  cardHolderName,
+  cardType,
+  cardColor,
+}: IPROPS) {
   return (
-    <div className=" bg-[#2e3867] w-[350px] h-[200px] rounded-lg shadow-xl  ">
-      <h1 className=" text-white font-semibold pl-4 pt-2">Credit.</h1>
-      <h1 className="-mt-6 pl-60 font-semibold text-white">Bank Name</h1>
-      <h1 className="text-xl font-medium text-white pt-[80px] pl-4">
-        1234 &nbsp; 5678 &nbsp; 9012 &nbsp; 3456
+    <div className= "    w-[350px] h-[200px] rounded-lg shadow-xl mb-20 hover:border-black border cursor-pointer hover:shadow-2xl hover:scale-105  transition-transform ease-in-out " style={{backgroundColor : cardColor}}>
+      <div className="flex justify-between pt-2 mx-4">
+        {" "}
+        <h1 className="  font-semibold ">Credit.</h1>
+        <h1 className=" font-semibold ">{bankName}</h1>
+      </div>
+
+      <h1 className="text-xl font-medium  pt-[80px] pl-4">
+        {cardNumber}
       </h1>
-      <p className=" uppercase  font-medium text-white pt-6 pl-4">
-        shanmugaraj s
-      </p>
-      <p className="uppercase font-medium text-white text-lg pl-72 -mt-7">
-        visa
-      </p>
-      <div className=" bg-[#ffe344] w-16 rounded-md h-10 -mt-[140px] ml-4"></div>
+      <div className="flex justify-between pb-4 mx-4 mt-6">
+        <p className=" uppercase  font-medium  ">
+          {cardHolderName}
+        </p>
+        <p className="uppercase font-medium  text-sm">
+          {cardType}
+        </p>
+      </div>
+      <div className=" bg-[#ffe344] w-16 rounded-md h-10 -mt-[150px] ml-4"></div>
     </div>
   );
 }
