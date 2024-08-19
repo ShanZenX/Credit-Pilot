@@ -1,4 +1,4 @@
-import { Dialog } from "../dialog";
+import { Dialog } from "../../ui/dialog";
 import CardModule from "./CardModule";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
@@ -59,14 +59,15 @@ export default function CardStructure() {
       </div>
       <div className="flex justify-evenly flex-wrap  ">
         {data.map((card, index) => (
-          <CardModule
+          <div className="w-[350px]"><CardModule
             key={index}
             bankName={card.BankName}
             cardNumber={card.CardNumber}
             cardHolderName={card.CardHolderName}
             cardType={card.CardType}
             cardColor={card.cardColor}
-          />
+            textColor="#000"
+          /></div>
         ))}
       </div>
     </div>
