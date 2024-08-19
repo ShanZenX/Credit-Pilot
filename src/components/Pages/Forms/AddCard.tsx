@@ -1,12 +1,15 @@
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+
 import { BlockPicker } from "react-color";
 import { useState } from "react";
 import "tippy.js/dist/tippy.css";
-import { Button } from "../ui/button";
 import { useForm } from "react-hook-form";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
-import { DatePicker } from "../ui/Datepicker";
+import { Label } from "@/components/ui/label";
+import { Input } from '@/components/ui/input';
+import { DatePicker } from '../../ui/Datepicker';
+import { Popover } from "@radix-ui/react-popover";
+import { PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
+
 
 type FormValues = {
   CardHolderName: string;

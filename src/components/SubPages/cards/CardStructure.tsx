@@ -9,8 +9,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Addcard from "@/components/SubPages/Addcard";
 import { useEffect, useState } from "react";
+import Addcard from "@/components/Pages/Forms/Addcard";
 
 
 type CardData = {
