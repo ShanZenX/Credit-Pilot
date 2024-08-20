@@ -6,22 +6,28 @@ import { ColumnDef } from "@tanstack/react-table"
 // You can use a Zod schema here if you want.
 export type dataTable = {
   id: string
-  amount: number
-  status: string
-  email: string
+  MerchantName: string
+  TransactionAmount: number
+  Category: string
+  TransactionDate: string
 }
 
 export const columns: ColumnDef<dataTable>[] = [
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "TransactionDate",
+    header: "TransactionDate",
   },
   {
-    accessorKey: "email",
-    header: "Email",
+    accessorKey: "MerchantName",
+    header: "MerchantName",
   },
   {
-    accessorKey: "amount",
-    header: "Amount",
+    accessorKey: "TransactionAmount",
+    header: "TransactionAmount",
   },
+  {
+    accessorKey: "Category",
+    header: "Category",
+  },
+
 ]

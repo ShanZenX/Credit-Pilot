@@ -72,10 +72,10 @@ export function DataTable<TData, TValue>({
     <div>
       <div className="flex items-center p-4">
         <Input
-          placeholder="Filter emails..."
-          value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+          placeholder="Filter Category..."
+          value={(table.getColumn("Category")?.getFilterValue() as string) ?? ""}
           onChange={(event) =>
-            table.getColumn("email")?.setFilterValue(event.target.value)
+            table.getColumn("Category")?.setFilterValue(event.target.value)
           }
           className="max-w-sm"
         />
@@ -110,13 +110,13 @@ export function DataTable<TData, TValue>({
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow
               
-              className="border !border-black !font-black !text-black"
+              className="border !border-black !font-black bg-black !text-white hover:bg-black"
               key={headerGroup.id}>
 
                 {headerGroup.headers.map((header) => {
                   return (
                     <TableHead
-                    className="text-black font-extrabold"
+                    className=" text-white font-extrabold"
                     key={header.id}>
                       {header.isPlaceholder
                         ? null

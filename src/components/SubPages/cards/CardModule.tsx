@@ -20,7 +20,6 @@ export default function CardModule({
   return (
     <Link to={"/Cards/CardDetails"} className= " flex flex-col min-w-[300px] h-[200px] rounded-lg shadow-xl  hover:border-black border cursor-pointer hover:shadow-2xl hover:scale-105  transition-transform ease-in-out " style={{backgroundColor : cardColor,color:textColor}}>
       <div className="flex justify-between pt-2 mx-4">
-        {" "}
         <h1 className="  font-semibold ">Credit.</h1>
         <h1 className=" font-semibold ">{bankName}</h1>
       </div>

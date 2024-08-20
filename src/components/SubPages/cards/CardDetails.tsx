@@ -10,133 +10,78 @@ import { Link } from 'react-router-dom';
 
 export default function CardDetails() {
   const data = [
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@ele.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-    {
-      id: "728ed52f",
-      amount: 100,
-      status: "pending",
-      email: "m@example.com",
-    },
-  ];
+      {
+        id: "1",
+        MerchantName: "Walmart",
+        TransactionAmount: 75.25,
+        Category: "Groceries",
+        TransactionDate: "2024-08-01",
+      },
+      {
+        id: "2",
+        MerchantName: "ExxonMobil",
+        TransactionAmount: 50.10,
+        Category: "Petrol",
+        TransactionDate: "2024-08-03",
+      },
+      {
+        id: "3",
+        MerchantName: "Amazon",
+        TransactionAmount: 120.99,
+        Category: "Online Shopping",
+        TransactionDate: "2024-08-05",
+      },
+      {
+        id: "4",
+        MerchantName: "Starbucks",
+        TransactionAmount: 8.50,
+        Category: "Food",
+        TransactionDate: "2024-08-06",
+      },
+      {
+        id: "5",
+        MerchantName: "Delta Airlines",
+        TransactionAmount: 350.00,
+        Category: "Travel",
+        TransactionDate: "2024-08-07",
+      },
+      {
+        id: "6",
+        MerchantName: "Best Buy",
+        TransactionAmount: 200.75,
+        Category: "Electronics",
+        TransactionDate: "2024-08-08",
+      },
+      {
+        id: "7",
+        MerchantName: "Shell",
+        TransactionAmount: 60.00,
+        Category: "Petrol",
+        TransactionDate: "2024-08-09",
+      },
+      {
+        id: "8",
+        MerchantName: "McDonald's",
+        TransactionAmount: 15.30,
+        Category: "Food",
+        TransactionDate: "2024-08-10",
+      },
+      {
+        id: "9",
+        MerchantName: "Target",
+        TransactionAmount: 95.40,
+        Category: "Groceries",
+        TransactionDate: "2024-08-11",
+      },
+      {
+        id: "10",
+        MerchantName: "Netflix",
+        TransactionAmount: 13.99,
+        Category: "Subscription",
+        TransactionDate: "2024-08-12",
+      },
+    ];
+    
 
   return (
     <div className="flex p-4 gap-5 bg-[#ffffff]">

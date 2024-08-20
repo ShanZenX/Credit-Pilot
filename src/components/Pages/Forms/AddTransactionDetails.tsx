@@ -142,9 +142,10 @@ export default function AddTransactionDetails() {
         </div>
       </form>
       <div className="flex justify-end p-5">
-        <Link to={"/Cards/CardDetails/"}></Link>
         <Button type="button" onClick={onUpdateTransaction}>
-          Update
+        <Link to={"/Cards/CardDetails"}>          Update
+        </Link>
+
         </Button>
       </div>
       </div>
