@@ -104,14 +104,20 @@ export function DataTable<TData, TValue>({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-md border">
-        <Table>
-          <TableHeader>
+      <div className=" ">
+        <Table className="mx-4 rounded-md border border-black w-[96.8%]">
+          <TableHeader className="border !border-black !font-black">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
+              <TableRow
+              
+              className="border !border-black !font-black !text-black"
+              key={headerGroup.id}>
+
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead
+                    className="text-black font-extrabold"
+                    key={header.id}>
                       {header.isPlaceholder
                         ? null
                         : flexRender(

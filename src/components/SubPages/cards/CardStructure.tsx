@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
-import Addcard from "@/components/Pages/Forms/Addcard";
+import AddCard from '../../Pages/Forms/AddCard';
 
 
 type CardData = {
@@ -52,7 +52,7 @@ export default function CardStructure() {
                 Make changes to your profile here. Click save when you're done.
               </DialogDescription>
             </DialogHeader>
-            <Addcard />
+            <AddCard />
           </DialogContent>
         </Dialog>{" "}</div>
       

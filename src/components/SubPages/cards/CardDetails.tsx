@@ -145,7 +145,7 @@ export default function CardDetails() {
           <h1 className="font-bold text-2xl"> Card Statement</h1>
           <Button><Link to={"/Cards/CardDetails/AddTransaction"}>Add Statement</Link></Button>
         </div>
-        <DataTable columns={columns} data={data} />
+        <DataTable columns={columns} data={data}  />
       </div>
       <div className="w-[25%] border border-black p-5 flex flex-col justify-between h-[89vh]">
         <div>
