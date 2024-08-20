@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { useEffect, useState } from "react";
 import AddCard from "../../Pages/Forms/AddCard";
-import ExpenseCard from "@/components/ui/MiniComponents/ExpenseCard";
-import { CircleCheckBig } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
 
 type CardData = {
   CardHolderName: string;
@@ -38,13 +37,13 @@ export default function CardStructure() {
   console.log(data);
 
   return (
-    <div className="  flex justify-center">
-      <div className="">
-        <div className=" flex justify-between ">
+    <div className="  flex justify-center border-black border">
+      <div>
+        <div className=" flex justify-center p-5">
           {" "}
-          <div className="flex justify-between w-full  mt-5">
+          <div className="flex justify-between w-[80%] mt-5">
             {" "}
-            <h1 className=" font-bold text-2xl mb-16 ">My Cards</h1>
+            <h1 className=" font-bold text-3xl  ">My Cards</h1>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default">Add Card</Button>
@@ -64,8 +63,8 @@ export default function CardStructure() {
         </div>
         <div className="flex justify-evenly flex-wrap   ">
           {data.map((card, index) => (
-            <div className="w-[47%] flex p-5 border-black border justify-around  m-5 ">
-              <div className="w-[350px] ">
+            <div className="w-[80%]  flex p-5  justify-evenly rounded-md  mb-5  bg-[#f8f8ff]">
+              <div className=" w-1/3  ">
                 <CardModule
                   key={index}
                   bankName={card.BankName}
@@ -76,21 +75,26 @@ export default function CardStructure() {
                   textColor="#000"
                 />
               </div>
-              <div className="flex flex-col w-2/5 justify-between gap-3 h-[200px] ">
-              <div>
-              <Button className="bg-red-700">Edit</Button>
-              <Button>Delete</Button>
+              <div className="flex w-1/3 justify-evenly">
+                <div className="flex flex-col justify-evenly  px-5 rounded-md shadow-md  bg-[#ffffff] shadow-zinc-300 w-11/12">
+                  <h1 className="font-extrabold text-2xl">My Total Spending </h1>
+                  <Slider defaultValue={[33]} max={100} step={1} />
+                  <div>
+                    {" "}
+                    <p className="font-extrabold text-xl">$ 2342289</p>
+                    <p className="font-extralight">$ 3232323 Available Balance</p>
+                  </div>
+                </div>
               </div>
-              <ExpenseCard
-                title="Total Amount Spend"
-                amount={23232}
-                bgColor="#131842"
-                Icon={CircleCheckBig}
-       />
-              
-            
-
-           
+              <div className="flex w-1/3 flex-col h-full justify-evenly gap-4">
+                <div className="shadow-md shadow-zinc-300 bg-[#ffffff] rounded-md p-3  h-1/2 items-center flex flex-col justify-center">
+                  <p className="font-extrabold text-2xl">$ 23232</p>
+                  <h1 className="font-extralight">Last Month Savings </h1>
+                </div>
+                <div className=" shadow-md shadow-zinc-300 bg-[#ffffff] rounded-md p-3  h-1/2 items-center flex flex-col justify-center">
+                <p className="font-extrabold text-2xl">$ 23232</p>
+                  <h1 className="font-extralight">Last Month Spend </h1>
+                </div>
               </div>
             </div>
           ))}
