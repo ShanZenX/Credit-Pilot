@@ -84,16 +84,16 @@ export default function CardDetails() {
     
 
   return (
-    <div className="flex p-4 gap-5 bg-[#ffffff]">
-      <div className="w-[75%] border border-black">
+    <div className="flex p-4 gap-5 bg-[#ffffff] pt-20">
+      <div className="w-[75%] border border-black shadow-lg shadow-[#0000005d]">
         <div className="flex justify-between p-5">
           <h1 className="font-bold text-2xl"> Card Statement</h1>
           <Button><Link to={"/Cards/CardDetails/AddTransaction"}>Add Statement</Link></Button>
         </div>
         <DataTable columns={columns} data={data}  />
       </div>
-      <div className="w-[25%] border border-black p-5 flex flex-col justify-between h-[89vh]">
-        <div>
+      <div className="w-[25%] border border-black p-5 flex shadow-lg shadow-[#0000005d] flex-col justify-between h-[89vh]">
+        <div className="h-[35%]">
           <h1 className="font-black text-2xl pb-4"> Visa Credit Card </h1>
 
           <CardModule
@@ -103,6 +103,7 @@ export default function CardDetails() {
             cardHolderName="Shanmugaraj"
             cardType="Visa"
             textColor="#fff"
+            
           />
         </div>
         <div className="flex flex-col gap-2 justify-between h-[371px]">
@@ -110,19 +111,19 @@ export default function CardDetails() {
           <ExpenseCard
             title="Total Amount Spent"
             amount={12345}
-            bgColor="#000"
+            bgColor="#fff"
             Icon={HandCoins}
           />
           <ExpenseCard
             title="Available Credit Balance"
             amount={122222}
-            bgColor="#000"
+            bgColor="#fff"
             Icon={Wallet}
           />
           <ExpenseCard
             title="Last Month's Spending"
             amount={12345}
-            bgColor="#000"
+            bgColor="#fff"
             Icon={Calendar}
           />
         </div>

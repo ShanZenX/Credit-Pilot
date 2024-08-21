@@ -43,7 +43,7 @@ export default function AddCard() {
 
   return (
     <form
-      className="flex flex-col border border-black p-5 gap-4 rounded-md"
+      className="flex flex-col border border-black p-5 gap-4 rounded-md "
       onSubmit={handleSubmit(onSubmit)}
     >
       {step === 1 && (

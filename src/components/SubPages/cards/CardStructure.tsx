@@ -37,13 +37,13 @@ export default function CardStructure() {
   console.log(data);
 
   return (
-    <div className="  flex justify-center border-black border">
+    <div className="  flex justify-center pt-10 bg-[#fff] ">
       <div>
         <div className=" flex justify-center p-5">
           {" "}
           <div className="flex justify-between w-[80%] mt-5">
             {" "}
-            <h1 className=" font-bold text-3xl  ">My Cards</h1>
+            <h1 className=" font-bold text-3xl text-[#4746f4] ">My Cards</h1>
             <Dialog>
               <DialogTrigger asChild>
                 <Button variant="default">Add Card</Button>
@@ -63,8 +63,8 @@ export default function CardStructure() {
         </div>
         <div className="flex justify-evenly flex-wrap   ">
           {data.map((card, index) => (
-            <div className="w-[80%]  flex p-5  justify-evenly rounded-md  mb-5  bg-[#f8f8ff]">
-              <div className=" w-1/3  ">
+            <div className="w-[80%]  flex p-5 m-5 justify-evenly  h-[270px] mb-5 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] bg-[#ffffff]">
+              <div className=" w-1/3 flex items-center ">
                 <CardModule
                   key={index}
                   bankName={card.BankName}
@@ -74,26 +74,37 @@ export default function CardStructure() {
                   cardColor={card.cardColor}
                   textColor="#000"
                 />
+          
               </div>
               <div className="flex w-1/3 justify-evenly">
-                <div className="flex flex-col justify-evenly  px-5 rounded-md shadow-md  bg-[#ffffff] shadow-zinc-300 w-11/12">
-                  <h1 className="font-extrabold text-2xl">My Total Spending </h1>
+                <div className="flex flex-col justify-evenly  px-5  shadow-inner    bg-[#ffffff]  w-11/12 border-black border">
+                  <h1 className="font-extrabold text-2xl">
+                    My Total Spending{" "}
+                  </h1>
                   <Slider defaultValue={[33]} max={100} step={1} />
                   <div>
                     {" "}
-                    <p className="font-extrabold text-xl">$ 2342289</p>
-                    <p className="font-extralight">$ 3232323 Available Balance</p>
+                    <p className="font-extrabold text-xl text-[#4746f4]">
+                      $ 2342289
+                    </p>
+                    <p className="font-extralight text-[#00000070]">
+                      $ 3232323 Available Balance
+                    </p>
                   </div>
                 </div>
               </div>
-              <div className="flex w-1/3 flex-col h-full justify-evenly gap-4">
-                <div className="shadow-md shadow-zinc-300 bg-[#ffffff] rounded-md p-3  h-1/2 items-center flex flex-col justify-center">
-                  <p className="font-extrabold text-2xl">$ 23232</p>
+              <div className="flex w-1/3 flex-col h-full justify-evenly gap-4 text-black">
+                <div className="   p-3 bg-white   h-1/2 items-center flex flex-col justify-center border-black border">
+                  <p className="font-extrabold text-2xl text-[#4746f4]">
+                    $ 23232
+                  </p>
                   <h1 className="font-extralight">Last Month Savings </h1>
                 </div>
-                <div className=" shadow-md shadow-zinc-300 bg-[#ffffff] rounded-md p-3  h-1/2 items-center flex flex-col justify-center">
-                <p className="font-extrabold text-2xl">$ 23232</p>
-                  <h1 className="font-extralight">Last Month Spend </h1>
+                <div className="   bg-white  p-3  h-1/2 items-center flex flex-col justify-center border-black border">
+                  <p className="font-extrabold text-2xl text-[#4746f4]">
+                    $ 23232
+                  </p>
+                  <h1 className="font-extralight ">Last Month Spend </h1>
                 </div>
               </div>
             </div>
