@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/popover"
 
 interface DatePickerProps {
-  onDateChange: (date: Date) => void;
+  onDateChange: (date: string) => void;
 }
 
 export function DatePicker({onDateChange}: DatePickerProps) {
@@ -23,8 +23,8 @@ export function DatePicker({onDateChange}: DatePickerProps) {
   const handleDateChange = (selectedDate: Date | undefined) => {
     if (selectedDate) {
       setDate(selectedDate);
-      onDateChange(selectedDate);
-    }
+      const formattedDate = format(selectedDate, "yyyy-MM-dd"); // Format date to "YYYY-MM-DD"
+      onDateChange(formattedDate);     }
   };
   
   return (

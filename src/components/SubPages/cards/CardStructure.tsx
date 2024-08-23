@@ -14,6 +14,7 @@ import AddCard from "../../Pages/Forms/AddCard";
 import { Slider } from "@/components/ui/slider";
 
 type CardData = {
+  id: string; 
   CardHolderName: string;
   CardType: string;
   CardNumber: number;
@@ -37,7 +38,7 @@ export default function CardStructure() {
   console.log(data);
 
   return (
-    <div className="  flex justify-center pt-10 bg-[#fff] ">
+    <div className="  flex justify-center pt-10 bg-[#eaeef6] ">
       <div>
         <div className=" flex justify-center p-5">
           {" "}
@@ -62,11 +63,11 @@ export default function CardStructure() {
           </div>
         </div>
         <div className="flex justify-evenly flex-wrap   ">
-          {data.map((card, index) => (
-            <div className="w-[80%]  flex p-5 m-5 justify-evenly  h-[270px] mb-5 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] bg-[#ffffff]">
-              <div className=" w-1/3 flex items-center ">
+          {data.map((card) => (
+            <div key={card.id}  className="w-[80%]  flex p-5 m-5 justify-evenly  h-[270px] mb-5 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] bg-[#fff]">
+              <div  className=" w-1/3 flex items-center" > 
                 <CardModule
-                  key={index}
+                  key={card.id}
                   bankName={card.BankName}
                   cardNumber={card.CardNumber}
                   cardHolderName={card.CardHolderName}
