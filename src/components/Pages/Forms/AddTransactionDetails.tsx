@@ -27,12 +27,12 @@ type FormValues = {
   MerchantName: string;
   TransactionAmount: number;
   Category: string;
-  TransactionDate: Date | null;
+  TransactionDate: string;
 };
 
 export default function AddTransactionDetails() {
   const { register, handleSubmit, setValue, reset } = useForm<FormValues>();
-  const [transactionDate, setTransactionDate] = useState<Date | null>(null);
+  const [transactionDate, setTransactionDate] = useState<string>("");
   const [formValues, setFormValues] = useState<FormValues[] | null>(null);
 
   const onSubmit = (data: FormValues) => {
@@ -45,15 +45,15 @@ export default function AddTransactionDetails() {
     );
     console.log("Form Values:", formData);
     reset();
-    setTransactionDate(null);
+    setTransactionDate("");
   };
 
   const onUpdateTransaction = () => {
     console.log(formValues);
   };
   return (
-    <div className="flex flex-col p-10 w-full bg-[#eaeef6] min-h-[100vh] justify-center items-center  pt-20">
-      <div className=" rounded-lg border-none p-5 w-[70%] shadow-2xl bg-white">
+    <div className="flex flex-col p-10 w-full bg-[#ffffff] min-h-[100vh]   pt-20">
+      <div className=" rounded-lg  p-5 w-[100%]">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className=" flex flex-col  justify-evenly"
@@ -63,6 +63,7 @@ export default function AddTransactionDetails() {
           <div className="flex justify-evenly">
             <div className="flex flex-col pt-[6px] w-[200px]">
               <Label>Transaction Date</Label>
+              
               <DatePicker onDateChange={(date) => setTransactionDate(date)} />
             </div>
             <div>
@@ -123,7 +124,7 @@ export default function AddTransactionDetails() {
                       key={index}
                     >
                       <TableCell className="font-medium">
-                        {data.TransactionDate?.toLocaleDateString()}
+                        {data.TransactionDate}
                       </TableCell>
                       <TableCell>{data.MerchantName}</TableCell>
                       <TableCell>{data.TransactionAmount}</TableCell>
@@ -144,8 +145,8 @@ export default function AddTransactionDetails() {
           </div>
         </form>
         <div className="flex justify-end p-5">
-          <Button type="button" onClick={onUpdateTransaction}>
-            <Link to={"/Cards/CardDetails"}> Update</Link>
+          <Button  type="button" onClick={onUpdateTransaction}>
+            <Link to={"/cards/card-details"}> Update</Link>
           </Button>
         </div>
       </div>

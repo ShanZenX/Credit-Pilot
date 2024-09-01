@@ -12,12 +12,13 @@ import {
 import { useEffect, useState } from "react";
 import AddCard from "../../Pages/Forms/AddCard";
 import { Slider } from "@/components/ui/slider";
+import { Link } from "react-router-dom";
 
 type CardData = {
   id: string; 
   CardHolderName: string;
   CardType: string;
-  CardNumber: number;
+  CardNumber: string;
   CreditLimit: number;
   BankName: string;
   ValidUpto: string;
@@ -59,13 +60,13 @@ export default function CardStructure() {
                 </DialogHeader>
                 <AddCard />
               </DialogContent>
-            </Dialog>{" "}
+            </Dialog>
           </div>
         </div>
         <div className="flex justify-evenly flex-wrap   ">
           {data.map((card) => (
             <div key={card.id}  className="w-[80%]  flex p-5 m-5 justify-evenly  h-[270px] mb-5 shadow-[0px_0px_10px_0px_rgba(0,0,0,0.2)] bg-[#fff]">
-              <div  className=" w-1/3 flex items-center" > 
+              <Link to={`/cards/${card.id}`}  className=" w-1/3 flex items-center" > 
                 <CardModule
                   key={card.id}
                   bankName={card.BankName}
@@ -73,16 +74,16 @@ export default function CardStructure() {
                   cardHolderName={card.CardHolderName}
                   cardType={card.CardType}
                   cardColor={card.cardColor}
-                  textColor="#000"
+                  id={card.id}
                 />
           
-              </div>
+              </Link>
               <div className="flex w-1/3 justify-evenly">
                 <div className="flex flex-col justify-evenly  px-5  shadow-inner    bg-[#ffffff]  w-11/12 border-black border">
                   <h1 className="font-extrabold text-2xl">
                     My Total Spending{" "}
                   </h1>
-                  <Slider defaultValue={[33]} max={100} step={1} />
+                  <Slider disabled={true} defaultValue={[33]}  max={100} step={1} />
                   <div>
                     {" "}
                     <p className="font-extrabold text-xl text-[#4746f4]">

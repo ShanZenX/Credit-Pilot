@@ -2,17 +2,14 @@
 
 import { ColumnDef } from "@tanstack/react-table"
 
-// This type is used to define the shape of our data.
-// You can use a Zod schema here if you want.
-export type dataTable = {
-  id: string
-  MerchantName: string
-  TransactionAmount: number
-  Category: string
-  TransactionDate: string
+interface Transaction {
+  MerchantName: string;
+  TransactionAmount: number;
+  Category: string;
+  TransactionDate: string;
 }
 
-export const columns: ColumnDef<dataTable>[] = [
+export const columns: ColumnDef<Transaction>[] = [
   {
     accessorKey: "TransactionDate",
     header: "TransactionDate",

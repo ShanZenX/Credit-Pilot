@@ -2,7 +2,7 @@ import { LucideIcon } from "lucide-react";
 
 interface IPROPS {
   title: string;
-  amount: number;
+  amount: string;
   bgColor: string;
   Icon: LucideIcon;
 }

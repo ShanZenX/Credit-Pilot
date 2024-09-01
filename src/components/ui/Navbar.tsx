@@ -10,7 +10,7 @@ export default function Navbar() {
         <Link to={"/"} className="hover:text-gray-300">
           Dashboard
         </Link>
-        <Link to={"/Cards"} className="hover:text-gray-300">
+        <Link to={"/cards"} className="hover:text-gray-300">
           Cards
         </Link>
         <Link to={"/User"} className="hover:text-gray-300">

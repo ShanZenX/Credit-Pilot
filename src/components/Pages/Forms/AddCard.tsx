@@ -9,6 +9,7 @@ import { Popover } from "@radix-ui/react-popover";
 import { PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 type FormValues = {
   CardHolderName: string;
@@ -40,6 +41,7 @@ export default function AddCard() {
       console.log({ ...data, cardColor: selectedColor })
       console.log(formattedData)
       reset()
+      
   };
 
   return (
@@ -155,7 +157,7 @@ export default function AddCard() {
 
       <div className="flex justify-between">
         {step > 1 && <Button type="button" onClick={prevStep}>Previous</Button>}
-        {step === 2 && <Button type="submit">Save Changes</Button>}
+        {step === 2 && <Button type="submit"><Link to={"/Cards"}> Save Changes</Link></Button>}
         {step < 2 && <Button type="button" onClick={nextStep}>Next</Button>}
       </div>
     </form>
