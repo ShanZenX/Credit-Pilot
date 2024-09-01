@@ -19,12 +19,11 @@ export default function CardModule({
 }: IPROPS) {
 
 
-  // console.log('CardModule props :', { bankName, cardNumber, cardHolderName, cardType, cardColor,  id });
 
 console.log(id)
   return (
     <div
-      className="flex text-white tracking-[1px] flex-col min-w-[300px] w-[100%] h-[100%] min-h-[200px] rounded-xl shadow-xl border-none hover:border-black border cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform ease-in-out"
+      className="flex text-black tracking-[1px] flex-col min-w-[300px] w-[100%] h-[100%] min-h-[200px] rounded-xl shadow-xl border-none hover:border-black border cursor-pointer hover:shadow-2xl hover:scale-105 transition-transform ease-in-out"
       style={{ backgroundColor: cardColor }}
     >
       <div className="flex justify-between pt-2 mx-4">
